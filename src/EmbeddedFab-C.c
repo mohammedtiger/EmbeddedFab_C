@@ -1,17 +1,27 @@
-/*
- ============================================================================
- Name        : EmbeddedFab-C.c
- Author      : mohammed nabil
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
+#include "stdio.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+//int sensor = 48;
+//long sensor1 = 48;
+//char sensor2 = 48;
+//double  sensor3 = 48;
+
+
+int  input = 0;
+
+
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+
+	scanf("%d" , &input);
+	printf("input :  %d \r\n" , input );
+
+
+	//	printf("Decimal of Sensor :  %d \r\n" , sensor );
+	//	printf("Char of Sensor :  %c \r\n" , sensor );
+	//
+	//	printf("Size of Sensor :  %d \r\n" , sizeof(sensor) );
+
+	//	printf("index :  %d \r\n" ,index );
+	//	printf("index :  %c \r\n" ,index );
+	return 0;
 }
