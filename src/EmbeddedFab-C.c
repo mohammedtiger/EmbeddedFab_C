@@ -1,62 +1,84 @@
 #include "stdio.h"
 
-//int sensor = 48;
-//long sensor1 = 48;
-//char sensor2 = 48;
-//double  sensor3 = 48;
+
+char Array[11] = {0};
+
+char value_char[2][3] = {{1 , 2 , 3} \
+					   , {5 , 6 , 7} \
+									};
 
 
-int  input = 1;
+char *value_char_ptr ;
+
+int value_int = 0 ;
+int *value_int_ptr ;
+
+
+void sWap ( char *x , char *y);
+void SwapArrays(char *arr1 , char *arr2 , int size);
 
 
 
 int main(void) {
 
-	puts("please enter input :");
-	scanf("%d" , &input);
-	printf("input : %d \r\n" , input);
-
-
-	//	input |= (1 << 0);
-	//	printf("input : %d\r\n" , input);
-	//
-	//	input &= ~(1 << 0);
-	//	printf("input : %d\r\n" , input);
-
-
-	//	if(input ==  1)
-	//	{
-	//
-	//		printf("OK");
-	//	}
-	//	else if (input == 2)
-	//	{
-	//		printf("Failed");
-	//
-	//	}else
-	//	{
-	//		printf("Try again ");
-	//
-	//	}
-
-	switch(input)
+	for(int index = 0 ; index < 3 ; index++)
 	{
-	case 1 :
-		printf("OK");
-
-		break;
-	case 2 :
-		printf("Failed");
-
-		break;
-	default :
-		printf("Try again ");
-
-		break;
-
+		printf("%d" ,value_char[0][index]);
 	}
+
+	printf("\r\n");
+
+	for(int index = 0 ; index < 3 ; index++)
+	{
+		printf("%d" ,value_char[1][index]);
+	}
+
+	SwapArrays(value_char[0] , value_char[1] , 3);
+
+	printf("\r\n");
+
+	for(int index = 0 ; index < 3 ; index++)
+	{
+		printf("%d" ,value_char[0][index]);
+	}
+
+	printf("\r\n");
+
+	for(int index = 0 ; index < 3 ; index++)
+	{
+		printf("%d" ,value_char[1][index]);
+	}
+
+
+
+
 
 
 
 	return 0;
 }
+
+
+
+
+void sWap ( char *x , char *y)
+{
+	char temp = *x;
+	*x = *y;
+	*y=temp;
+
+}
+
+
+
+void SwapArrays(char *arr1 , char *arr2 , int size)
+{
+
+	for(int index = 0 ; index < size ; index ++)
+	{
+		sWap( &arr1[index] , &arr2[index]);
+	}
+
+}
+
+
